@@ -4,5 +4,6 @@ export const  getLocationInfo=async(latitude, longitude)=> {
     import.meta.env.VITE_GEOCODING_API
   }`;
   const response = await axios.get(url);
+
   return response.data.results[0].components.country;
 }
